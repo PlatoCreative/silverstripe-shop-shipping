@@ -18,7 +18,7 @@ class OrderShippingExtension extends DataExtension{
 			return new ShippingPackage();
 		}
 
-		$weight = $items->Sum('Weight', true); //Sum is found on OrdItemList (Component Extension)
+		$weight = $items->Sum('Weight', false); //Sum is found on OrdItemList (Component Extension)
 		$width = $items->Sum('Width', true);
 		$height = $items->Sum('Height', true);
 		$depth = $items->Sum('Depth', true);
